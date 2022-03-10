@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template,jsonify
 from flask_mysqldb import MySQL
 from os import environ
 
@@ -23,5 +23,5 @@ app.register_blueprint(travel_app)
 # Landing Page In Here
 @app.route("/")
 def landing_page():
-    return render_template('landing/index.html');
+    return jsonify(("message", "welcome to the app man ..."))
 
