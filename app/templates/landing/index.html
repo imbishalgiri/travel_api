@@ -1,0 +1,365 @@
+{% extends 'layout/index.html' %}
+<!-- Header -->
+{% block body %}
+<header id="header" class="header">
+  <div class="header-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="text-container">
+            <h1>
+              <span class="green">WANNA</span>
+
+              <span id="js-rotating">TRAVEL?, ENJOY?, EXPLORE?</span>
+            </h1>
+            <p class="p-heading p-large">
+              Twenty years from now you will be more disappointed by the things
+              you didn’t do than by the ones you did do.
+            </p>
+            <a class="btn-solid-lg page-scroll" href="#card__div"
+              >Check Tours</a
+            >
+          </div>
+        </div>
+        <!-- end of col -->
+      </div>
+      <!-- end of row -->
+    </div>
+    <!-- end of container -->
+  </div>
+  <!-- end of header-content -->
+</header>
+<!-- end of header -->
+<!-- end of header -->
+
+<!-- Intro -->
+<div id="intro" class="basic-1">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5">
+        <div class="text-container">
+          <div class="section-title">INTRO</div>
+          <h2>We Offer Some Of The Best Business Growth Services In Town</h2>
+          <p>
+            Launching a new company or developing the market position of an
+            existing one can be quite an overwhelming processs at times.
+          </p>
+          <p class="testimonial-text">
+            "Our mission here at Aira is to get you through those tough moments
+            relying on our team's expertise in starting and growing companies."
+          </p>
+          <div class="testimonial-author">Louise Donovan - CEO</div>
+        </div>
+        <!-- end of text-container -->
+      </div>
+      <!-- end of col -->
+      <div class="col-lg-7">
+        <div class="image-container">
+          <img class="img-fluid" src={{ url_for('static',
+          filename='images/intro-office.jpg')}} alt="alternative" />
+        </div>
+        <!-- end of image-container -->
+      </div>
+      <!-- end of col -->
+    </div>
+    <!-- end of row -->
+  </div>
+  <!-- end of container -->
+</div>
+<!-- end of basic-1 -->
+<!-- end of intro -->
+
+<!-- Services -->
+<div id="services" class="cards-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title">SERVICES</div>
+        <h2>
+          Choose The Service Package<br />
+          That Suits Your Needs
+        </h2>
+      </div>
+      <!-- end of col -->
+    </div>
+    <!-- end of row -->
+    <div id="card__div" class="row">
+      <div class="col-lg-12">
+        <!-- Card -->
+        <div class="card">
+          <div class="card-image">
+            <img class="img-fluid" src={{url_for('static',
+            filename='images/services-1.jpg')}} alt="alternative" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Off The Ground Off The Ground</h3>
+            <p>
+              Perfect for fresh ideas or young startups, this package will help
+              get the business off the ground
+            </p>
+            <ul class="list-unstyled li-space-lg">
+              <li class="media">
+                <i class="fas fa-square"></i>
+                <div class="media-body">Environment and competition</div>
+              </li>
+              <li class="media">
+                <i class="fas fa-square"></i>
+              </li>
+            </ul>
+            <p class="price">Starting at <span>$199</span></p>
+          </div>
+          <div class="button-container">
+            <a class="btn-solid-reg page-scroll" href="#services">DETAILS</a>
+          </div>
+          <!-- end of button-container -->
+        </div>
+        <!-- end of card -->
+
+        <!-- Card -->
+        <div class="card">
+          <div class="card-image">
+            <img class="img-fluid" src={{url_for('static',
+            filename='images/services-2.jpg')}} alt="alternative" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Accelerated Growth</h3>
+            <p>
+              Use this service pack to give your company the necessary impulse
+              to become an industry leader
+            </p>
+            <ul class="list-unstyled li-space-lg">
+              <li class="media">
+                <i class="fas fa-square"></i>
+                <div class="media-body">Business strategy planning</div>
+              </li>
+              <li class="media">
+                <i class="fas fa-square"></i>
+                <div class="media-body">Taking the planned actions</div>
+              </li>
+            </ul>
+            <p class="price">Starting at <span>$299</span></p>
+          </div>
+          <div class="button-container">
+            <a class="btn-solid-reg page-scroll" href="#callMe">DETAILS</a>
+          </div>
+          <!-- end of button-container -->
+        </div>
+        <!-- end of card -->
+
+        <!-- Card -->
+        <div class="card">
+          <div class="card-image">
+            <img class="img-fluid" src={{url_for('static',
+            filename='images/services-3.jpg')}} alt="alternative" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Market Domination</h3>
+            <p>
+              You already are a reference point in your industry now you need to
+              learn about acquisitions
+            </p>
+            <ul class="list-unstyled li-space-lg">
+              <li class="media">
+                <i class="fas fa-square"></i>
+                <div class="media-body">Maintaining the leader status</div>
+              </li>
+              <li class="media">
+                <i class="fas fa-square"></i>
+                <div class="media-body">Acquisitions the right way</div>
+              </li>
+            </ul>
+            <p class="price">Starting at <span>$299</span></p>
+          </div>
+          <div class="button-container">
+            <a class="btn-solid-reg page-scroll" href="#callMe">DETAILS</a>
+          </div>
+          <!-- end of button-container -->
+        </div>
+        <!-- end of card -->
+        <!-- Card -->
+        <div class="card">
+          <div class="card-image">
+            <img class="img-fluid" src={{url_for('static',
+            filename='images/services-3.jpg')}} alt="alternative" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Market Domination</h3>
+            <p>
+              You already are a reference point in your industry now you need to
+              learn about acquisitions
+            </p>
+            <ul class="list-unstyled li-space-lg">
+              <li class="media">
+                <i class="fas fa-square"></i>
+                <div class="media-body">Maintaining the leader status</div>
+              </li>
+              <li class="media">
+                <i class="fas fa-square"></i>
+                <div class="media-body">Acquisitions the right way</div>
+              </li>
+            </ul>
+            <p class="price">Starting at <span>$299</span></p>
+          </div>
+          <div class="button-container">
+            <a class="btn-solid-reg page-scroll" href="#callMe">DETAILS</a>
+          </div>
+          <!-- end of button-container -->
+        </div>
+        <!-- end of card -->
+      </div>
+      <!-- end of col -->
+    </div>
+    <!-- end of row -->
+  </div>
+  <!-- end of container -->
+</div>
+<!-- end of cards-2 -->
+<!-- end of services -->
+
+<!-- Testimonials -->
+<div class="slider">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2>Read Our Customer Testimonials</h2>
+        <p class="p-heading">
+          Our clients are our partners and we can not imagine a better future
+          for our company without helping them reach their objectives
+        </p>
+      </div>
+      <!-- end of col -->
+    </div>
+    <!-- end of row -->
+    <div class="row">
+      <div class="col-lg-12">
+        <!-- Card Slider -->
+        <div class="slider-container">
+          <div class="swiper-container card-slider">
+            <div class="swiper-wrapper">
+              <!-- Slide -->
+              <div class="swiper-slide">
+                <div class="card">
+                  <img class="card-image" src={{url_for('static',
+                  filename='images/testimonial-1.jpg')}} alt="alternative" />
+                  <div class="card-body">
+                    <div class="testimonial-text">
+                      The guys from Aria helped with getting my business off the
+                      ground and turning into a profitable company.
+                    </div>
+                    <div class="testimonial-author">Jude Thorn - Founder</div>
+                  </div>
+                </div>
+              </div>
+              <!-- end of swiper-slide -->
+              <!-- end of slide -->
+
+              <!-- Slide -->
+              <div class="swiper-slide">
+                <div class="card">
+                  <img class="card-image" src={{url_for('static',
+                  filename='images/testimonial-2.jpg')}} alt="alternative" />
+                  <div class="card-body">
+                    <div class="testimonial-text">
+                      I purchased the Growth Accelerator service pack a few
+                      years ago and I renewed the contract each year.
+                    </div>
+                    <div class="testimonial-author">
+                      Marsha Singer - Marketer
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end of swiper-slide -->
+              <!-- end of slide -->
+
+              <!-- Slide -->
+              <div class="swiper-slide">
+                <div class="card">
+                  <img class="card-image" src={{url_for('static',
+                  filename='images/testimonial-3.jpg')}} alt="alternative" />
+                  <div class="card-body">
+                    <div class="testimonial-text">
+                      Aria's CEO personally attends client meetings and gives
+                      his feedback on business growth strategies.
+                    </div>
+                    <div class="testimonial-author">Roy Smith - Developer</div>
+                  </div>
+                </div>
+              </div>
+              <!-- end of swiper-slide -->
+              <!-- end of slide -->
+
+              <!-- Slide -->
+              <div class="swiper-slide">
+                <div class="card">
+                  <img class="card-image" src={{url_for('static',
+                  filename='images/testimonial-4.jpg')}} alt="alternative" />
+                  <div class="card-body">
+                    <div class="testimonial-text">
+                      At the beginning I thought the prices are a little high
+                      for what they offer but they over deliver each and every
+                      time.
+                    </div>
+                    <div class="testimonial-author">Ronald Spice - Owner</div>
+                  </div>
+                </div>
+              </div>
+              <!-- end of swiper-slide -->
+              <!-- end of slide -->
+
+              <!-- Slide -->
+              <div class="swiper-slide">
+                <div class="card">
+                  <img class="card-image" src={{url_for('static',
+                  filename='images/testimonial-5.jpg')}} alt="alternative" />
+                  <div class="card-body">
+                    <div class="testimonial-text">
+                      I recommend Aria to every business owner or growth leader
+                      that wants to take his company to the next level.
+                    </div>
+                    <div class="testimonial-author">Lindsay Rune - Manager</div>
+                  </div>
+                </div>
+              </div>
+              <!-- end of swiper-slide -->
+              <!-- end of slide -->
+
+              <!-- Slide -->
+              <div class="swiper-slide">
+                <div class="card">
+                  <img class="card-image" src={{url_for('static',
+                  filename='images/testimonial-6.jpg')}} alt="alternative" />
+                  <div class="card-body">
+                    <div class="testimonial-text">
+                      My goals for using Aria's services seemed high when I
+                      first set them but they've met them with no problems.
+                    </div>
+                    <div class="testimonial-author">Ann Black - Consultant</div>
+                  </div>
+                </div>
+              </div>
+              <!-- end of swiper-slide -->
+              <!-- end of slide -->
+            </div>
+            <!-- end of swiper-wrapper -->
+
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- end of add arrows -->
+          </div>
+          <!-- end of swiper-container -->
+        </div>
+        <!-- end of sliedr-container -->
+        <!-- end of card slider -->
+      </div>
+      <!-- end of col -->
+    </div>
+    <!-- end of row -->
+  </div>
+  <!-- end of container -->
+</div>
+<!-- end of slider -->
+<!-- end of testimonials -->
+
+{% endblock %}
