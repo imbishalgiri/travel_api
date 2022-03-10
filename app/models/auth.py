@@ -1,5 +1,5 @@
 from app import mysql
-from app.models.utils import encrypt_password, verify_password
+from app.models.utils import encrypt_password, verify_encrypted_password
 
 
 
@@ -19,7 +19,23 @@ def get_single_user(email):
     user = cur.fetchall()
     mysql.connection.commit()
     cur.close()
-    return user
+    if user:
+        return user
+    return False
+
+def verify_password(email, password):
+    cur = mysql.connection.cursor()
+    cur.execute("select password from users where email = %s",(email,))
+    db_pass = cur.fetchone()
+    mysql.connection.commit()
+    
+    cur.close()
+    print("db pass -->", db_pass)
+    if db_pass and verify_encrypted_password(str(db_pass[0]), password):
+        return True
+    return False
+
+
 
 
 # TODO --> make a separate function for wrapping cursor extra codes 

@@ -23,5 +23,5 @@ app.register_blueprint(travel_app)
 # Landing Page In Here
 @app.route("/")
 def landing_page():
-    return jsonify(("message", "welcome to the app man ..."))
+    return jsonify(page = "Landing page", title = "Welcome")
 

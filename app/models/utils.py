@@ -9,6 +9,6 @@ def encrypt_password(password):
 #     db_pass --> hashed password
 #     user_pass --> password from form input
 
-def verify_password(db_pass, user_pass):
+def verify_encrypted_password(db_pass, user_pass):
     return sha256_crypt.verify(user_pass, db_pass)
 	
