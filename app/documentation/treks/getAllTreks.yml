@@ -1,0 +1,45 @@
+EndPoint for Getting All Treks
+you will get all treks data from our database as response through this endpoint
+---
+tags:
+  - Treks
+
+consumes:
+  - application/json
+
+securityDefinitions:
+  Bearer:
+    type: apiKey
+    name: Authorization
+    in: header
+
+security:
+  - Bearer: []
+
+definitions:
+  Treks:
+    type: object
+    properties:
+      status:
+        type: string
+      data:
+        type: array
+        items:
+          type: object
+          properties:
+            days:
+              type: string
+            difficulty:
+              type: string
+            title:
+              type: string
+            total_cost:
+              type: string
+            uid:
+              type: string
+
+responses:
+  200:
+    description: Sample response would look like
+    schema:
+      $ref: "#/definitions/Treks"

@@ -1,0 +1,32 @@
+EndPoint for deleting single trek
+dont need no request body 👉🏿👉🏿👉🏿
+---
+tags:
+  - Treks
+
+consumes:
+  - application/json
+
+definitions:
+  delRes:
+    type: object
+    properties:
+      status:
+        type: string
+      message:
+        type: string
+
+securityDefinitions:
+  Bearer:
+    type: apiKey
+    name: Authorization
+    in: header
+
+security:
+  - Bearer: []
+
+responses:
+  200:
+    description: Sample response would look like
+    schema:
+      $ref: "#/definitions/delRes"

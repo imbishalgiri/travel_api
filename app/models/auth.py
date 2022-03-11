@@ -30,7 +30,6 @@ def verify_password(email, password):
     mysql.connection.commit()
     
     cur.close()
-    print("db pass -->", db_pass)
     if db_pass and verify_encrypted_password(str(db_pass[0]), password):
         return True
     return False
