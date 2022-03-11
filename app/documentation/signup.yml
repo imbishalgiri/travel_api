@@ -1,0 +1,44 @@
+consume this endpoint to register into the app
+use this endpoint for signing up
+---
+tags:
+  - Authorization
+
+consumes:
+  - application/json
+
+definitions:
+  Signup:
+    type: object
+    properties:
+      first_name:
+        type: string
+      last_name:
+        type: string
+      email:
+        type: string
+      password:
+        type: string
+
+  SignupRes:
+    type: object
+    properties:
+      first_name:
+        type: string
+      last_name:
+        type: string
+      email:
+        type: string
+
+parameters:
+  - in: body
+    name: Signup
+    description: request body should be similar to this object
+    schema:
+      $ref: "#/definitions/Signup"
+
+responses:
+  200:
+    description: A login page Object
+    schema:
+      $ref: "#/definitions/SignupRes"

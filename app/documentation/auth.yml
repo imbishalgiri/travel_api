@@ -1,0 +1,36 @@
+Hit this endpoint to login
+You will get bearer token if you logged in
+---
+tags:
+  - Authorization
+
+consumes:
+  - application/json
+
+definitions:
+  Login:
+    type: object
+    properties:
+      email:
+        type: string
+      password:
+        type: string
+
+  LandingRes:
+    type: object
+    properties:
+      token:
+        type: string
+
+parameters:
+  - in: body
+    name: login
+    description: request body should be similar to this object
+    schema:
+      $ref: "#/definitions/Login"
+
+responses:
+  200:
+    description: A login page Object
+    schema:
+      $ref: "#/definitions/LandingRes"

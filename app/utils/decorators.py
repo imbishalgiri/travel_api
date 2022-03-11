@@ -3,6 +3,7 @@ from os import environ
 from functools import wraps
 import jwt
 
+# THIS IS A MIDDLEWARE TO CHECK WHETHER USER IS AUTHORIZED OR NOT -->
 def token_required(f):
    @wraps(f)
    def decorator(*args, **kwargs):

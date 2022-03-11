@@ -1,0 +1,23 @@
+EndPoint for landing page
+this endpoint does nothing
+---
+tags:
+  - Landing Page
+
+consumes:
+  - application/json
+
+definitions:
+  Landing:
+    type: object
+    properties:
+      title:
+        type: string
+      des:
+        type: string
+
+responses:
+  200:
+    description: A landing page Object
+    schema:
+      $ref: "#/definitions/Landing"
