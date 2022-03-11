@@ -3,7 +3,7 @@ from app.models.auth import add_user, get_single_user, verify_password
 from app.controllers.constants import VALIDATION_ERR, CREATED, SUCCESS
 from os import environ
 from app.utils.decorators import token_required
-from flasgger.utils import swag_from
+
 # it is being imported but idk why my vscode throws this linting error
 import jwt
 # ----------------------------------------------------------

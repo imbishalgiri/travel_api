@@ -1,0 +1,45 @@
+EndPoint for updating existing trek
+Request body should be of following format 👉🏿👉🏿👉🏿
+---
+tags:
+  - Treks
+
+consumes:
+  - application/json
+
+definitions:
+  TrekPost:
+    type: object
+    properties:
+      days:
+        type: string
+      difficulty:
+        type: string
+      title:
+        type: string
+      total_cost:
+        type: string
+      uid:
+        type: string
+
+securityDefinitions:
+  Bearer:
+    type: apiKey
+    name: Authorization
+    in: header
+
+security:
+  - Bearer: []
+
+parameters:
+  - in: body
+    name: create treks
+    description: Sample request body should look like
+    schema:
+      $ref: "#/definitions/TrekPost"
+
+responses:
+  200:
+    description: Sample response would look like
+    schema:
+      $ref: "#/definitions/TrekPosted"
