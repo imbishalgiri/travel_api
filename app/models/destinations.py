@@ -1,10 +1,8 @@
+from re import L
 from app import mysql
 from app.models.utils import encrypt_password, verify_encrypted_password
 
-
-
-
-
+# --------------------------------------------------------
 def add_trek(title, days, difficulty, total_cost, user_id):
     cur = mysql.connection.cursor()
     cur.execute('insert into trek_destinations (title, days, difficulty, total_cost, user_id ) values (%s, %s, %s, %s, %s)',(title, days, difficulty,total_cost, user_id));
@@ -12,29 +10,44 @@ def add_trek(title, days, difficulty, total_cost, user_id):
     cur.close()
     return True
 
-
-def get_single_user(email):
+# -----------------------------------------------------
+def get_all_treks():
     cur = mysql.connection.cursor()
-    cur.execute("select * from users where email = %s", (email,))
-    user = cur.fetchall()
+    cur.execute('select * from trek_destinations')
+    treks = cur.fetchall()
     mysql.connection.commit()
     cur.close()
-    if user:
-        return user
-    return False
+    return treks or False
 
-def verify_password(email, password):
+# -------------------------------------------------------------
+def get_single_trek(id):
     cur = mysql.connection.cursor()
-    cur.execute("select password from users where email = %s",(email,))
-    db_pass = cur.fetchone()
+    cur.execute('select * from trek_destinations where id = %s', (id,))
+    trek = cur.fetchone()
     mysql.connection.commit()
-    
     cur.close()
-    print("db pass -->", db_pass)
-    if db_pass and verify_encrypted_password(str(db_pass[0]), password):
-        return True
-    return False
+    return trek or False
 
+# --------------------------------------------------------------
+def delete_single_trek(id):
+    deleted = 0
+    cur = mysql.connection.cursor()
+    cur.execute('delete from trek_destinations where id = %s',(id,))
+    mysql.connection.commit()
+    deleted = cur.rowcount
+    cur.close()
+    return True if(deleted > 0) else False
+
+# ----------------------------------------------------------------
+def update_single_trek(id, title, days, difficulty, total_cost, user_id):
+    updated = 0;
+    cur = mysql.connection.cursor()
+    cur.execute('update trek_destinations set title = %s, days = %s, difficulty = %s, total_cost = %s, user_id = %s where id = %s', (title, days, difficulty, total_cost, user_id, id))
+    mysql.connection.commit()
+    updated = cur.rowcount
+    cur.close()
+    return True if(updated > 0) else False
+   
 
 
 
