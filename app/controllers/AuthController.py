@@ -42,8 +42,5 @@ def signup():
     except KeyError as err:
         return {"error": "You forgot {" + str(err) + "}"}, VALIDATION_ERR
 
-@token_required
-def add_to_db(user):
-    return jsonify({"user": user})
 
 

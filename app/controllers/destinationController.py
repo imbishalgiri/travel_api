@@ -63,8 +63,8 @@ def add_trek_destination(user):
         return get_treks()
 
 @token_required
-# for both deleting and getting treks
-# supported requests --> @DELETE/trek/:id  @GET/trek/:id
+# for  deleting, updating and getting treks
+# supported requests --> @DELETE/trek/:id  @GET/trek/:id @PUT/trek/:id
 def single_trek_controller(user,id):
     if request.method == "GET":
         single_trek = get_single_trek(id)
